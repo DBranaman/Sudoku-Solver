@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args){
+  		System.out.print("Sudoku -->");
+  		Scanner sc = new Scanner(System.in);
+  		String sudokuString = sc.nextLine();
+  
+ 	 	char[] sudokuGame = new char[81];
+  		for (int i = 0; i < 81; i++){
+    		sudokuGame[i] = (char)('0' +i%9 +1);
+  		}
+  
+		System.out.print(sudokuGame);
+  		//System.out.print(sudokuString)
+  	}
+}
