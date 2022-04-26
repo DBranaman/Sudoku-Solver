@@ -1,18 +1,28 @@
 import java.util.*;
+import java.util.Arrays;
+//import Character;
 
 public class Main
 {
 	public static void main(String[] args){
+  		
+  		//Read in Sudoku Game
   		System.out.print("Sudoku -->");
   		Scanner sc = new Scanner(System.in);
   		String sudokuString = sc.nextLine();
   
  	 	char[] sudokuGame = new char[81];
   		for (int i = 0; i < 81; i++){
-    		sudokuGame[i] = (char)('0' +i%9 +1);
+  		    if(Character.isLetterOrDigit(sudokuString.charAt(i))){
+  		        sudokuGame[i] = sudokuString.charAt(i);
+  		    } else {
+    		    sudokuGame[i] = '-';
+  		    }
   		}
   
-		System.out.print(sudokuGame);
+  
+        //Display Sudoku Game
+        System.out.print(getSliceOfArray(sudokuGame, 0, 10));
   		//System.out.print(sudokuString)
   	}
 }
